@@ -87,9 +87,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/demo/jest.config.js",
-            "tsConfig": "apps/demo/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/demo/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       }
@@ -153,9 +151,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/lib-publishable/jest.config.js",
-            "tsConfig": "libs/lib-publishable/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/lib-publishable/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -185,9 +181,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/alib/jest.config.js",
-            "tsConfig": "libs/alib/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/alib/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -217,9 +211,51 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/blib/jest.config.js",
-            "tsConfig": "libs/blib/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "dummy-lib": {
+      "projectType": "library",
+      "root": "libs/dummy-lib",
+      "sourceRoot": "libs/dummy-lib/src",
+      "prefix": "nx-publishable-lib",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/dummy-lib/tsconfig.lib.json",
+            "project": "libs/dummy-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/dummy-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/dummy-lib/tsconfig.lib.json",
+              "libs/dummy-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/dummy-lib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/dummy-lib/jest.config.js",
+            "tsConfig": "libs/dummy-lib/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/blib/src/test-setup.ts"
+            "setupFile": "libs/dummy-lib/src/test-setup.ts"
           }
         }
       },

@@ -1,12 +1,6 @@
 module.exports = {
-  name: 'blib',
+  name: 'dummy-lib',
   preset: '../../jest.config.js',
-  coverageDirectory: '../../coverage/libs/blib',
-  snapshotSerializers: [
-    'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
-    'jest-preset-angular/build/AngularSnapshotSerializer.js',
-    'jest-preset-angular/build/HTMLCommentSerializer.js',
-  ],
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -18,4 +12,10 @@ module.exports = {
       ],
     },
   },
+  coverageDirectory: '../../coverage/libs/dummy-lib',
+  snapshotSerializers: [
+    'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
+    'jest-preset-angular/build/AngularSnapshotSerializer.js',
+    'jest-preset-angular/build/HTMLCommentSerializer.js',
+  ],
 };

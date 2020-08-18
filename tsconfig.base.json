@@ -20,7 +20,8 @@
         "libs/lib-publishable/src/index.ts"
       ],
       "@nx-publishable-lib/alib": ["libs/alib/src/index.ts"],
-      "@nx-publishable-lib/blib": ["libs/blib/src/index.ts"]
+      "@nx-publishable-lib/blib": ["libs/blib/src/index.ts"],
+      "@dummyLib": ["libs/dummy-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
