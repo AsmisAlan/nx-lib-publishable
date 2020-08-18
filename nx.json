@@ -25,6 +25,15 @@
     "demo-e2e": {
       "tags": [],
       "implicitDependencies": ["demo"]
+    },
+    "lib-publishable": {
+      "tags": []
+    },
+    "alib": {
+      "tags": []
+    },
+    "blib": {
+      "tags": []
     }
   }
 }

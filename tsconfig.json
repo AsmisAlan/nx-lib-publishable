@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-publishable-lib/lib-publishable": [
+        "libs/lib-publishable/src/index.ts"
+      ],
+      "@nx-publishable-lib/alib": ["libs/alib/src/index.ts"],
+      "@nx-publishable-lib/blib": ["libs/blib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

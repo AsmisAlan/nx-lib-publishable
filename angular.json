@@ -120,6 +120,114 @@
           }
         }
       }
+    },
+    "lib-publishable": {
+      "projectType": "library",
+      "root": "libs/lib-publishable",
+      "sourceRoot": "libs/lib-publishable/src",
+      "prefix": "nx-publishable-lib",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/lib-publishable/tsconfig.lib.json",
+            "project": "libs/lib-publishable/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/lib-publishable/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/lib-publishable/tsconfig.lib.json",
+              "libs/lib-publishable/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/lib-publishable/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lib-publishable/jest.config.js",
+            "tsConfig": "libs/lib-publishable/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/lib-publishable/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "alib": {
+      "projectType": "library",
+      "root": "libs/alib",
+      "sourceRoot": "libs/alib/src",
+      "prefix": "nx-publishable-lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/alib/tsconfig.lib.json",
+              "libs/alib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/alib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/alib/jest.config.js",
+            "tsConfig": "libs/alib/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/alib/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "blib": {
+      "projectType": "library",
+      "root": "libs/blib",
+      "sourceRoot": "libs/blib/src",
+      "prefix": "nx-publishable-lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/blib/tsconfig.lib.json",
+              "libs/blib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/blib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/blib/jest.config.js",
+            "tsConfig": "libs/blib/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/blib/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
