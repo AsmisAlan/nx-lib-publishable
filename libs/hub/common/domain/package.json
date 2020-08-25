@@ -1,7 +1,6 @@
-
 {
-  "name": "@test",
-  "version": "1.0.0",
+  "name": "@nx-publishable-lib/hub/common/domain",
+  "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.9",
     "@angular/core": "^10.0.9"

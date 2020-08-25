@@ -21,7 +21,26 @@
       ],
       "@nx-publishable-lib/alib": ["libs/alib/src/index.ts"],
       "@nx-publishable-lib/blib": ["libs/blib/src/index.ts"],
-      "@dummyLib": ["libs/dummy-lib/src/index.ts"]
+      "@dummyLib": ["libs/dummy-lib/src/index.ts"],
+      "@nx-publishable-lib/buildablelib": ["libs/buildablelib/src/index.ts"],
+      "@nx-publishable-lib/hub": ["libs/hub/src/index.ts"],
+      "@nx-publishable-lib/hub/subfeature": [
+        "libs/hub/subfeature/src/index.ts"
+      ],
+      "@nx-publishable-lib/hub/common/api": [
+        "libs/hub/common/api/src/index.ts"
+      ],
+      "@nx-publishable-lib/hub/common/domain": [
+        "libs/hub/common/domain/src/index.ts"
+      ],
+      "@nx-publishable-lib/hub/common/feat": [
+        "libs/hub/common/feat/src/index.ts"
+      ],
+      "@nx-publishable-lib/hub/core": ["libs/hub/core/src/index.ts"],
+      "@nx-publishable-lib/hub/core/domain": [
+        "libs/hub/core/domain/src/index.ts"
+      ],
+      "@nx-publishable-lib/hub/core/feat": ["libs/hub/core/feat/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

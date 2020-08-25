@@ -14,7 +14,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [ "lint", "test", "e2e"]
+        "cacheableOperations": ["lint", "test", "e2e"]
       }
     }
   },
@@ -36,6 +36,33 @@
       "tags": []
     },
     "dummy-lib": {
+      "tags": []
+    },
+    "buildablelib": {
+      "tags": []
+    },
+    "hub": {
+      "tags": []
+    },
+    "hub-subfeature": {
+      "tags": []
+    },
+    "hub-common-api": {
+      "tags": []
+    },
+    "hub-common-domain": {
+      "tags": []
+    },
+    "hub-common-feat": {
+      "tags": []
+    },
+    "hub-core": {
+      "tags": []
+    },
+    "hub-core-domain": {
+      "tags": []
+    },
+    "hub-core-feat": {
       "tags": []
     }
   },
